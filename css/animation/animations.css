@@ -1,9 +1,11 @@
 @import url('./animationLaptop.css');
 @import url('./animationPrinter.css');
+body {
+    background: linear-gradient(var(--dark-gray), var(--black));
+}
 
 .navbar ul {
     padding: var(--inner-padding);
-    background-color: var(--dark-gray);
 }
 
 .navbar a {
@@ -12,10 +14,6 @@
 
 .navbar a::before {
     content: '\27F5';
-}
-
-main {
-    background-color: var(--dark-gray);
 }
 
 @media screen and (min-width: 700px) {
@@ -48,6 +46,5 @@ main {
 }
 
 footer {
-    background-color: var(--dark-gray);
     color: var(--font-color2);
 }

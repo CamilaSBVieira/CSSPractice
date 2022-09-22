@@ -2,18 +2,22 @@
     padding: var(--inner-padding);
     box-shadow: inset -1px -1px var(--shadow-red);
 }
+
 .navbar a {
     color: var(--font-color3);
 }
+
 .navbar a::before {
     content: '\27F5';
 }
+
 @media screen and (min-width: 700px) {
     .navbar {
         margin-bottom: calc(var(--inner-padding) * 2);
         box-shadow: 1px 1px 1rem var(--shadow-red);
     }
 }
+
 .banner {
     display: flex;
     flex-direction: column;
@@ -45,10 +49,13 @@
     text-decoration: none;
     color: var(--font-color3);
     font-weight: bold;
+    transition: transform .2s linear;
 }
-.link:active {
+
+.link:hover,
+.link:focus {
     display: inline-block;
-        transform: skew(-15deg);
+    transform: skew(-15deg);
 }
 
 @media screen and (min-width: 700px) {
@@ -71,13 +78,6 @@
     .image:hover {
         transform: scale(1.02);
     }
-    .link {
-        transition: transform .2s linear;
-    }
-    .link:hover {
-        display: inline-block;
-        transform: skew(-15deg);
-    }
 }
 
 .botao {
@@ -94,33 +94,83 @@
     font-size: 1.6rem;
     font-weight: normal;
 }
-.botao span, .botao .icon {
+
+.botao span,
+.botao .icon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
+
 .botao span {
     left: 0;
     width: 70%;
 }
+
 .botao .icon {
     right: 0;
     width: 30%;
 }
-@media screen and (min-width: 700px) {
-    .botao * {
-        transition: all .5s linear;
-    }
-    .botao:hover span {
-        transform: translate(-100%, -50%);
-    }
-    .botao:hover .icon {
-        width: 100%;
-    }
+
+.botao * {
+    transition: all .5s linear;
 }
-.botao:active span {
+
+.botao:hover span,
+.botao:focus span {
     transform: translate(-100%, -50%);
 }
-.botao:hover .icon {
+
+.botao:hover .icon,
+.botao:focus .icon {
     width: 100%;
+}
+
+.shoplist {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    margin: var(--inner-padding) auto;
+    gap: .5rem;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+}
+
+@media screen and (min-width: 700px) {
+    .shoplist {
+        justify-content: space-between;
+        width: 80%;
+    }
+}
+
+.shoplist h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px var(--font-color3);
+}
+
+.shoplist figure {
+    width: calc((100% / 2) - .5rem);
+    height: auto;
+}
+
+@media screen and (min-width: 700px) {
+    .shoplist figure {
+        width: calc((100% / 3) - .5rem);
+    }
+}
+
+.shoplist figure img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    filter: saturate(.9) contrast(90%) brightness(80%);
+}
+
+.shoplist figure img:hover,
+.shoplist figure img:focus {
+    filter: saturate(1.1) contrast(100%) brightness(100%);
+    cursor: pointer;
 }
