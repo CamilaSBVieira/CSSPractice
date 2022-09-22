@@ -1,0 +1,87 @@
+.nav {
+    padding: var(--inner-padding);
+    box-shadow: 2px 2px 1rem var(--dark-gray);
+}
+.nav a {
+    color: var(--font-color);
+}
+.botoes {
+    padding: var(--inner-padding);
+    width: 80%;
+    margin: 0 auto;
+}
+.btn {
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: var(--font-color2);
+    display: block;
+    margin: var(--inner-padding) auto;
+    padding: var(--inner-padding);
+    border: none;
+    background-color: var(--dark-gray2);
+    position: relative;
+}
+
+
+.border-pop::after {
+    content: '';
+    border: var(--border-width) solid var(--mid-blue);
+    position: absolute;
+    top: var(--border-width);
+    bottom: var(--border-width);
+    left: var(--border-width);
+    right: var(--border-width);
+    z-index: -2;
+    transition: all .2s;
+}
+.border-pop:hover::after,
+.border-pop:focus::after {
+    top: calc(var(--border-width) * -2);
+    bottom: calc(var(--border-width) * -2);;
+    right: calc(var(--border-width) * -2);;
+    left: calc(var(--border-width) * -2);;
+    z-index: -3;
+}
+
+.back-slide {
+    z-index: 1;
+}
+.back-slide::after {
+    content: '';
+    background-color: var(--mid-blue);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform ease-in-out 1s;
+}
+.back-slide:hover::after,
+.back-slide:focus::after {
+    transform: translateX(0%) scaleX(1);
+}
+
+.border-slide::after {
+    --border-width: 6px;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: var(--border-width);
+    background-color: var(--mid-blue);
+    transform: scale(0);
+    transition: all .5s;
+}
+.border-slide:focus::after, .border-slide:hover::after {
+    transform: scale(1);
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/_reset.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <script src="https://kit.fontawesome.com/ee26830423.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/animation/animations.css">
+    <title>Animations</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="./index.html">Index</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- SLEEPY LAPTOP -->
+        <section class="carrosel">
+            <figure>
+                <img src="#" alt="Laptop">
+                <figcaption>Laptop Animated</figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="Printer">
+                <figcaption>Printer Animated</figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="Donuts">
+                <figcaption>Donuts Animated</figcaption>
+            </figure>
+        </section>
+
+        <section class="animation first">
+            <div class="laptop">
+                <div class="screen">
+                    <div class="eyes eyel"></div>
+                    <div class="closed_eyes eyel"></div>
+                    <div class="eyes eyer"></div>
+                    <div class="closed_eyes eyer"></div>
+                    <div class="mouth"></div>
+                    <div class="mouth_close"></div>
+                    <div class="snooze">
+                        <span>z</span>
+                        <span>z</span>
+                        <span>z</span>
+                    </div>                
+                </div>
+            </div>
+            <div class="keyboard">
+                <table>
+                    <tr>
+                        <td>tab</td>
+                        <td>q</td>
+                        <td>w</td>
+                        <td>e</td>
+                        <td>r</td>
+                        <td>t</td>
+                        <td>y</td>
+                        <td>u</td>
+                        <td>i</td>
+                        <td>o</td>
+                        <td>p</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">caps</td>
+                        <td>a</td>
+                        <td>s</td>
+                        <td>d</td>
+                        <td>f</td>
+                        <td>g</td>
+                        <td>h</td>
+                        <td>j</td>
+                        <td>k</td>
+                        <td>l</td>
+                    </tr>
+                    <tr>
+                        <td>shift</td>
+                        <td>z</td>
+                        <td>x</td>
+                        <td>c</td>
+                        <td>v</td>
+                        <td>b</td>
+                        <td>n</td>
+                        <td>m</td>
+                        <td>,</td>
+                        <td>.</td>
+                        <td>;</td>
+                    </tr>
+                    <tr>
+                        <td>ctrl</td>
+                        <td colspan="9" class="wake">l</td>
+                        <td>ctrl</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- CRAZY PRINTER -->
+        <section class="animation second">
+            <button class="print"><i class="fa-solid fa-print"></i></button>
+            <button class="stop"><i class="fa-solid fa-power-off"></i></button>
+            <div class="paper">
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+            </div>
+            <div class="printer">
+                <div class="eyes eyel"></div>
+                <div class="eyesclosed eyel"></div>
+                <div class="eyes eyer"></div>
+                <div class="eyesclosed eyer"></div>
+                <div class="mouth"></div>
+                <div class="mouthclosed"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Camila Vieira</p>
+    </footer>
+    <!-- gotta have scale, translate, rotate, skew(?)
+    maybe ill do that bread inspired by kibum hmmm, cause i guess it has a lot of animations
+    Carousel with 3 cards, preshowing the animations, it pauses when the mouse is on top of it and it has a link to click
+    to go to the animation itself
+    Notebook with eyes and mouth on the screen, sleeping, and when the mouse moves (animation) the eyes open
+    Printer that prints every two seconds, when it starts printing, it blinks for half a second
+    Donuts moving rotating, maybe some tongue delicious
+    -->
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+.navbar {
+    padding: var(--inner-padding);
+    box-shadow: inset -1px -1px var(--shadow-red);
+}
+.navbar a {
+    color: var(--font-color3);
+}
+.navbar a::before {
+    content: '\27F5';
+}
+@media screen and (min-width: 700px) {
+    .navbar {
+        margin-bottom: calc(var(--inner-padding) * 2);
+        box-shadow: 1px 1px 1rem var(--shadow-red);
+    }
+}
+.banner {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+.text {
+    --inner-padding: 2rem;
+    padding: var(--inner-padding);
+    box-sizing: border-box;
+}
+
+.text p {
+    margin-bottom: var(--inner-padding);
+}
+
+.banner figure {
+    width: 100%;
+    height: 100%;
+}
+
+.banner figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--font-color3);
+    font-weight: bold;
+}
+.link:active {
+    display: inline-block;
+        transform: skew(-15deg);
+}
+
+@media screen and (min-width: 700px) {
+    .banner {
+        flex-direction: row;
+        margin: 0 auto;
+        width: 80%;
+        align-items: center;
+    }
+
+    .banner div {
+        width: 50%;
+    }
+
+    .image {
+        align-self: stretch;
+        transition: transform .5s linear;
+    }
+
+    .image:hover {
+        transform: scale(1.02);
+    }
+    .link {
+        transition: transform .2s linear;
+    }
+    .link:hover {
+        display: inline-block;
+        transform: skew(-15deg);
+    }
+}
+
+.botao {
+    width: 100%;
+    background-color: var(--shadow-red);
+    border: none;
+    padding: var(--inner-padding);
+    overflow: hidden;
+    position: relative;
+}
+
+.botao a {
+    color: var(--font-color2);
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+.botao span, .botao .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.botao span {
+    left: 0;
+    width: 70%;
+}
+.botao .icon {
+    right: 0;
+    width: 30%;
+}
+@media screen and (min-width: 700px) {
+    .botao * {
+        transition: all .5s linear;
+    }
+    .botao:hover span {
+        transform: translate(-100%, -50%);
+    }
+    .botao:hover .icon {
+        width: 100%;
+    }
+}
+.botao:active span {
+    transform: translate(-100%, -50%);
+}
+.botao:hover .icon {
+    width: 100%;
+}

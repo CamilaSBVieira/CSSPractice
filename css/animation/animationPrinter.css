@@ -1,0 +1,194 @@
+.animation.second {
+    background-color: var(--pink);
+    position: relative;
+}
+
+.paper {
+    background-color: var(--white);
+    width: 100px;
+    height: 150px;
+    margin: 0 auto;
+    animation: printing 2s linear infinite;
+}
+.paper hr {
+    --border-width: 1px;
+    border-top: var(--border-width) solid var(--dark-gray);
+    width: 90%;
+}
+.paper hr:first-child {
+    border-top: 0px ;
+}
+@keyframes printing {
+    0% {
+        transform: translateY(100%);
+    }
+    40% {
+        transform: translateY(60%);
+    }
+    50% {
+        transform: translateY(50%);
+    }
+    90% {
+        transform: translateY(10%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.print, .stop {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    border: none;
+    font-size: .9rem;
+    z-index: 3;
+    padding: var(--text-padding);
+}
+.print {
+    background-color: var(--mid-blue);
+    transform: translate(-100%);
+}
+.print:focus ~ .paper {
+    animation: printing 2s linear infinite;
+}
+.stop {
+    background-color: var(--red);
+}
+.stop:focus ~ .paper {
+    animation-play-state: paused;
+}
+.printer {
+    width: 200px;
+    height: 210px;
+    background-color: var(--blue);
+    box-shadow: 2px 2px 10px var(--mid-blue);
+    margin: 0 auto;
+    position: relative;
+}
+.printer .eyes, .printer .eyesclosed {
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+}
+.printer .eyes {
+    box-shadow: inset -2px -2px 10px var(--dark-gray);
+    background-color: var(--black);
+    height: 40px;
+    opacity: 0;
+    animation: var(--open) 2s linear forwards;
+}
+.printer .eyesclosed {
+    height: 40px;
+    border-top: var(--border-width) solid var(--black);
+    transform: translateY(25%);
+    animation: var(--close) 2s linear forwards;
+    opacity: 1;
+}
+.printer .eyel {
+    left: 20%;
+}
+.printer .eyer {
+    right: 20%;
+}
+.printer .eyes::after {
+    content: '';
+    background-color: var(--white);
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: inset -2px -2px 5px var(--lightgrey);
+}
+.printer .eyes::before {
+    content: '';
+    background-color: var(--white);
+    width: 40%;
+    height: 25%;
+    transform: rotate(15deg);
+    position: absolute;
+    top: 40%;
+    right: 20%;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: inset -2px -2px 5px var(--lightgrey);
+}
+.printer .eyesclosed::before {
+    content: '';
+    background-color: var(--red);
+    width: 50%;
+    height: 30%;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.printer .eyel.eyesclosed::before  {
+    left: 0;
+}
+.printer .eyer.eyesclosed::before {
+    right: 0;
+}
+.printer .mouth, .printer .mouthclosed {
+    width: 35px;
+    height: 30px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.printer .mouth {
+    background-color: var(--red);
+    border-radius: 0 0 50% 50%;
+    box-shadow: inset -2px -2px 5px var(--shadow-red);
+    animation: var(--close) 2s linear forwards;
+    opacity: 1;
+}
+.printer .mouthclosed {
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-bottom: var(--border-width) solid var(--black);
+    animation: var(--open) 2s linear forwards;
+    opacity: 0;
+}
+@keyframes open {
+    0% {
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes close {
+    0% {
+        opacity: 1;
+    }
+    1% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.print:focus ~ .printer {
+    --close: open;
+    --open: close;
+}
+.stop:focus ~ .printer {
+    --open:  open;
+    --close: close;   
+}
+.printer::after {
+    content: '';
+    border-top: var(--border-width) solid var(--mid-blue);
+    height: 25%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}

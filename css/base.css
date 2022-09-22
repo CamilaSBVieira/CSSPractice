@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+:root {
+    --section-margin: 4rem;
+    --inner-padding: 1rem;
+    --text-padding: .5rem;
+
+    --font-color: black;
+    --font-color2: white;
+    --font-color2: white;
+    --font-color3: darkseagreen;
+
+    --line-height: 1.5;
+
+    --light-blue: aliceblue;
+    --lightgrey: lightgrey;
+    --pink: lightpink;
+    --blue: lightblue;
+    --mid-blue: cadetblue;
+    --mid-blue2: #5F8CE3;
+    --dark-gray: rgb(112, 103, 103);
+    --dark-gray2: rgb(54, 48, 48);
+    --black: black;
+    --white: white;
+    --dark-blue: #2c303a;
+    --text-back: rgba(0, 0, 0, .5);
+    --shadow: black;
+    --shadow-red: darkred;
+    --red: tomato;
+    --orange: orange;
+
+    --border-width: 3px;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    line-height: var(--line-height);
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
+}   
+footer {
+    text-align: center;
+    padding: var(--inner-padding);
+}

@@ -1,0 +1,117 @@
+body {
+    background: linear-gradient(var(--white), var(--light-blue));
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 700px) {
+    body {
+        padding: 0 2rem;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr 200px;
+        grid-template-areas:
+            'header header header'
+            'main main menu'
+            'footer footer footer';
+    }
+}
+
+.header-nav {
+    grid-area: header;
+    padding: var(--inner-padding);
+}
+
+a {
+    color: var(--dark-blue);
+}
+a::before {
+    content: '\27F5';
+}
+
+.lateral {
+    --line-height: 1.2;
+    font-size: 1.3rem;
+    line-height: var(--line-height);
+    grid-area: menu;
+    padding: var(--inner-padding);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.lateral figure {
+    width: 50%;
+    height: 50%;
+}
+.lateral p {
+    width: 50%;
+}
+@media screen and (min-width: 700px) {
+    .lateral {
+        position: sticky;
+        height: 60%;
+        top: 2%;
+        flex-direction: column;
+    }
+    .lateral figure {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+    .lateral p {
+        width: 100%;
+    }
+}
+.lateral figure img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.main-section {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+.retrato {
+    grid-row: span 2;
+}
+.paisagem {
+    grid-column: span 2;
+}
+@media screen and (max-width: 699px) {
+    .desk {
+        display: none;
+    }
+}
+@media screen and (min-width: 700px) {
+    .main-section {
+        padding: 3rem 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 200px;
+    }
+    article:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    .mobile {
+        display: none;
+    }
+}
+.main-section figure {
+    width: 100%;
+    height: 100%;
+}
+.main-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    grid-area: footer;
+    font-weight: bold;
+}

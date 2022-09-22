@@ -1,0 +1,29 @@
+@import url('https://kit.fontawesome.com/ee26830423.js');
+
+body {
+    background: linear-gradient( white, var(--light-blue));
+    min-height: 100vh;
+}
+.title {
+    text-align: center;
+    font-size: 2em;
+    line-height: var(--line-height);
+    padding: var(--inner-padding);
+}
+.nav {
+    padding: var(--inner-padding);
+}
+.nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+@media screen and (min-width: 700px) {
+    .nav ul {
+        flex-direction: row;
+    }
+}
+a {
+    color: var(--font-color);
+}

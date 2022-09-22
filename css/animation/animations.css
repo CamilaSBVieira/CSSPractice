@@ -1,0 +1,44 @@
+@import url('./animationLaptop.css');
+@import url('./animationPrinter.css');
+
+.navbar ul {
+    padding: var(--inner-padding);
+}
+.navbar a {
+    color: var(--font-color);
+}
+.navbar a::before {
+    content: '\27F5';
+}
+.carrosel {
+    border: 1px solid red;
+    min-height: 70vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carrosel figure {
+    width: calc(100% / 3);
+    border: 1px solid black;
+}
+
+.animation {
+    width: 100%;
+    padding: var(--inner-padding);
+    box-sizing: border-box;
+}
+@media screen and (min-width: 700px) {
+    .animation{
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+
+
+/* 
+playstate on hover
+playbutton:hover .parent {
+    playstate: pause
+ */
