@@ -1,4 +1,6 @@
+@import url('./reset.css');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 :root {
     --section-margin: 4rem;
     --inner-padding: 1rem;
