@@ -17,6 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 80%;
+    border: 1px solid red;
     margin: var(--section-margin) auto;
     gap: 1rem;
     box-sizing: border-box;
@@ -26,6 +27,7 @@ body {
     .cards-section {
         flex-direction: row;
         justify-content: space-around;
+        min-height: 600px;
     }
     .card {
         width: calc((100% / 3) - 4rem);
