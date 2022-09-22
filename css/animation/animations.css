@@ -3,42 +3,51 @@
 
 .navbar ul {
     padding: var(--inner-padding);
+    background-color: var(--dark-gray);
 }
+
 .navbar a {
-    color: var(--font-color);
+    color: var(--font-color2);
 }
+
 .navbar a::before {
     content: '\27F5';
 }
-.carrosel {
-    border: 1px solid red;
-    min-height: 70vh;
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+main {
+    background-color: var(--dark-gray);
 }
-.carrosel figure {
-    width: calc(100% / 3);
-    border: 1px solid black;
+
+@media screen and (min-width: 700px) {
+    main {
+        --inner-padding: 3rem;
+        padding: var(--inner-padding) 0;
+    }
+}
+
+.animation.first {
+    background-color: var(--orange);
+}
+
+.animation.second {
+    background-color: var(--pink);
 }
 
 .animation {
+    --inner-padding: 2rem;
     width: 100%;
     padding: var(--inner-padding);
     box-sizing: border-box;
 }
+
 @media screen and (min-width: 700px) {
-    .animation{
+    .animation {
         margin: 0 auto;
         width: 80%;
     }
 }
 
-
-/* 
-playstate on hover
-playbutton:hover .parent {
-    playstate: pause
- */
+footer {
+    background-color: var(--dark-gray);
+    color: var(--font-color2);
+}

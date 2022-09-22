@@ -1,5 +1,4 @@
 .animation.second {
-    background-color: var(--pink);
     position: relative;
 }
 
@@ -38,7 +37,7 @@
 .print, .stop {
     position: absolute;
     left: 50%;
-    bottom: 20%;
+    bottom: 21%;
     border: none;
     font-size: .9rem;
     z-index: 3;
