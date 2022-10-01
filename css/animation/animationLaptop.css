@@ -84,9 +84,11 @@
     }
     51% {
         opacity: 0;
+        box-shadow: none;
     }
     100% {
         opacity: 0;
+        box-shadow: none;
     }
 }
 @keyframes olhoFechado {
