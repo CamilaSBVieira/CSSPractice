@@ -42,6 +42,7 @@
     font-size: .9rem;
     z-index: 3;
     padding: var(--text-padding);
+    color: var(--font-color);
 }
 .print {
     background-color: var(--mid-blue);
